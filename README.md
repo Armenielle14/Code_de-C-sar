@@ -1,1 +1,2 @@
 # Code_de-C-sar
+def cesar(strl, cle):    nc, i = '', 0    while i in range(len(strl)):        if ord("a") <= ord(strl[i]) and ord("z") >= ord(strl[i]) or ord(strl[i]) >= ord("A") and ord(strl[i]) <= ord("Z"):            vara = ord('a') if (ord(strl[i]) >= ord("a")) and (ord(strl[i]) <= ord("z")) else ord('a'.upper())            nc = nc + chr((cle + ord(strl[i]) - vara) % 26 +vara) if (((cle + ord(strl[i])) - vara) > 26) or (cle + ord(strl[i]) - vara < 0) else chr(cle + ord(strl[i]))        else: nc = nc + strl[i]        i = i + 1    return nc
